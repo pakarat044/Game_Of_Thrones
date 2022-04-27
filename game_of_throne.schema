@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS episodes (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    season        INTEGER   NOT NULL,
+    episode_num   INTEGER   NOT NULL,
+    title         TEXT      NOT NULL,
+    directed_by   TEXT      NOT NULL,
+    written_by    TEXT      NOT NULL,
+    us_viewers    INTEGER   NOT NULL,
+    rating_id     INTEGER   NOT NULL,
+    FOREIGN KEY (rating_id) REFERENCES imdb_rating (id)
+);
+
+CREATE TABLE IF NOT EXISTS imdb_rating (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    title           TEXT    NOT NULL,
+    rating          FLOAT   NOT NULL,
+    total_votes     INTEGER NOT NULL,
+    description     TEXT
+);
