@@ -28,5 +28,6 @@ uvicorn main:app --reload
 test the api with openapi by this path ➜ http://127.0.0.1:8000/docs
 
 ## UML class
+![](https://www.img.in.th/images/96df17e9ecb872b0b53c5bc0f7ee15de.png)
 
 ## package diagram
