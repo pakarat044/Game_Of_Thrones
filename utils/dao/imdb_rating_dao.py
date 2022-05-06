@@ -1,12 +1,11 @@
 from models.imdb_rating import IMDBRating
 from sqlalchemy.orm import Session
 
-
 class IMDBRatingDAO:
 
     def __init__(self, session: Session):
         self.__session = session
-
+    
     def get_all_rating(self):
         rating_list = self.__session.query(IMDBRating).all()
         return rating_list

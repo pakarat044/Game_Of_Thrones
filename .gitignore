@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 game_of_throne.db
+.DS_Store

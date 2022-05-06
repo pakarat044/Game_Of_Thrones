@@ -1,11 +1,10 @@
-from sqlalchemy.orm import relationship
-from sqlalchemy import Column, Float, Integer, Text
+from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy import Column, Float, Integer, Text, null
 from .base import Base
-
 
 class IMDBRating(Base):
     __tablename__ = 'imdb_rating'
-
+    
     id = Column(Integer, primary_key=True)
     title = Column(Text, nullable=False)
     rating = Column(Float, nullable=False)

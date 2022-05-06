@@ -1,7 +1,6 @@
 from models.episodes import Episodes
 from sqlalchemy.orm import Session
 
-
 class EpisodesDAO:
 
     def __init__(self, session: Session):
@@ -45,3 +44,7 @@ class EpisodesDAO:
         episodes_list = self.get_all_episodes()
         episodes_list_by_rating = sorted(episodes_list, key=lambda episode: episode.imdb_rating.rating)
         return episodes_list_by_rating
+
+    def create_episode(self, episode: Episodes):
+        self.__session.add(episode)
+        self.__session.commit()
