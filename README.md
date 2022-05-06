@@ -1,3 +1,6 @@
+# Web Service API 
+[API Documentation](https://github.com/pakarat044/game_of_thrones/wiki/API-Documentation)
+
 # Game of Thrones
 
 > Application about Game of Thrones where users can search the database about Game of Thrones.
